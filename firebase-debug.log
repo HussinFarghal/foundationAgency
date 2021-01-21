@@ -265,3 +265,270 @@ You're about to initialize a Firebase project in this directory:
 
 Example: firebase deploy --token "$FIREBASE_TOKEN"
  
+[debug] [2021-01-21T18:15:51.733Z] ----------------------------------------------------------------------
+[debug] [2021-01-21T18:15:51.734Z] Command:       /Users/hussien/.nvm/versions/node/v14.15.4/bin/node /Users/hussien/.nvm/versions/node/v14.15.4/bin/firebase deploy
+[debug] [2021-01-21T18:15:51.735Z] CLI Version:   9.2.1
+[debug] [2021-01-21T18:15:51.735Z] Platform:      darwin
+[debug] [2021-01-21T18:15:51.735Z] Node Version:  v14.15.4
+[debug] [2021-01-21T18:15:51.736Z] Time:          Thu Jan 21 2021 20:15:51 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-01-21T18:15:51.736Z] ----------------------------------------------------------------------
+[debug] [2021-01-21T18:15:51.736Z] 
+[debug] [2021-01-21T18:15:51.741Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-21T18:15:51.742Z] > authorizing via signed-in user
+[debug] [2021-01-21T18:15:51.742Z] [iam] checking project foundationagency-25e32 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-01-21T18:15:51.745Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/foundationagency-25e32:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-01-21T18:15:52.672Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:15:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=580","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:15:52.674Z] > refreshing access token with scopes: []
+[debug] [2021-01-21T18:15:52.674Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:15:52.947Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 21 Jan 2021 18:15:53 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:15:52.975Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 [none]
+[debug] [2021-01-21T18:15:53.410Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 200
+[debug] [2021-01-21T18:15:53.411Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 {"projectId":"foundationagency-25e32","projectNumber":"1036498804696","displayName":"foundationAgency","name":"projects/foundationagency-25e32","resources":{"hostingSite":"foundationagency-25e32"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'foundationagency-25e32'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-01-21T18:15:53.413Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-21T18:15:53.413Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:15:53.682Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Thu, 21 Jan 2021 18:15:53 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:15:53.708Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-01-21T18:15:55.190Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:15:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[foundationagency-25e32]: beginning deploy... 
+[info] i  hosting[foundationagency-25e32]: found 9 files in dist/ 
+[debug] [2021-01-21T18:15:55.208Z] > refreshing access token with scopes: []
+[debug] [2021-01-21T18:15:55.209Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:15:55.210Z] [hosting] hash cache [ZGlzdA] stored for 9 files
+[debug] [2021-01-21T18:15:55.210Z] [hosting][hash queue][FINAL] {"max":9,"min":4,"avg":5.111111111111111,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":13}
+[debug] [2021-01-21T18:15:55.437Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 21 Jan 2021 18:15:55 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:15:55.464Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/ddd69a2ff78341fa:populateFiles [none]
+[debug] [2021-01-21T18:15:55.464Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/ddd69a2ff78341fa:populateFiles {"files":{"/apple-touch-icon.png":"a94127d8e4d7d3bf7a9a1ab6639db8cce855ccdf96b6dcd5977f8e8e8efec82c","/robots.txt":"9963f443ecc7fca2136e438f25b1cd36f900c22cbb35f1a6972de2e67c528f62","/index.html":"4763f721bb9f78a797a509ad09dcb6c31ec2bd350e85912ceec363a38164af67","/favicon.ico":"e16aad7fc0c39287247b97315c18b5d8be88315009971f32c892735177e90cc7","/scripts/main.js":"f4103f5ef19d50429cd75a8cc7c4d465bff465c9f34cd6d82fb5b78e451daa6c","/styles/main.css":"036896d41b904dc9f8daf283d3efc7361c98af54c75fc69481586062e2519fb8","/scripts/modernizr.js":"2d1bd22c9cb55f7aaade5038e218a6fbe5668e90d1f5392bbf38b1b58f09fd39","/styles/vendor.css":"9722e7b36fe51a20c32d26f80fa2447b3dc2fcdff113fa5a8981d94000463485","/scripts/vendor.js":"7e41ffe85bb760aef16b377c9d65d7952b7d0a0af0cc2957d27cdefd1a17d357"}}
+[debug] [2021-01-21T18:15:56.531Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/ddd69a2ff78341fa:populateFiles 200
+[debug] [2021-01-21T18:15:56.531Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/ddd69a2ff78341fa:populateFiles {"uploadRequiredHashes":["4763f721bb9f78a797a509ad09dcb6c31ec2bd350e85912ceec363a38164af67"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/ddd69a2ff78341fa/files"}
+[debug] [2021-01-21T18:15:56.532Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/ddd69a2ff78341fa/files/4763f721bb9f78a797a509ad09dcb6c31ec2bd350e85912ceec363a38164af67 [none]
+[debug] [2021-01-21T18:15:56.532Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/ddd69a2ff78341fa/files/4763f721bb9f78a797a509ad09dcb6c31ec2bd350e85912ceec363a38164af67 [stream]
+[debug] [2021-01-21T18:15:56.533Z] [hosting][populate queue][FINAL] {"max":1324,"min":1324,"avg":1324,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1325}
+[debug] [2021-01-21T18:15:56.533Z] [hosting] uploads queued: 1
+[debug] [2021-01-21T18:15:58.234Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/ddd69a2ff78341fa/files/4763f721bb9f78a797a509ad09dcb6c31ec2bd350e85912ceec363a38164af67 200
+[debug] [2021-01-21T18:15:58.234Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/ddd69a2ff78341fa/files/4763f721bb9f78a797a509ad09dcb6c31ec2bd350e85912ceec363a38164af67 [stream]
+[debug] [2021-01-21T18:15:58.234Z] [hosting][upload queue][FINAL] {"max":1703,"min":1703,"avg":1703,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1703}
+[info] ✔  hosting[foundationagency-25e32]: file upload complete 
+[debug] [2021-01-21T18:15:58.235Z] [hosting] deploy completed after 3044ms
+[debug] [2021-01-21T18:15:58.467Z] [
+  {
+    "config": {
+      "public": "dist/",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "foundationagency-25e32"
+    },
+    "site": "foundationagency-25e32",
+    "version": "sites/foundationagency-25e32/versions/ddd69a2ff78341fa"
+  }
+]
+[info] i  hosting[foundationagency-25e32]: finalizing version... 
+[debug] [2021-01-21T18:15:58.467Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-21T18:15:58.468Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:15:58.707Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 21 Jan 2021 18:15:58 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:15:58.732Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/ddd69a2ff78341fa?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-01-21T18:15:59.875Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:15:59 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:15:59.876Z] [hosting] finalized version for foundationagency-25e32: {"name":"sites/foundationagency-25e32/versions/ddd69a2ff78341fa","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-01-21T18:15:54.706787Z","createUser":{"email":"hussienFarghal@gmail.com"},"finalizeTime":"2021-01-21T18:15:59.926933Z","finalizeUser":{"email":"hussienFarghal@gmail.com"}}
+[info] ✔  hosting[foundationagency-25e32]: version finalized 
+[info] i  hosting[foundationagency-25e32]: releasing new version... 
+[debug] [2021-01-21T18:15:59.876Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/releases?version_name=sites/foundationagency-25e32/versions/ddd69a2ff78341fa  
+ {"message":null}
+[debug] [2021-01-21T18:16:00.915Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:16:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:16:00.916Z] [hosting] release: {"name":"sites/foundationagency-25e32/releases/1611252960293158","version":{"name":"sites/foundationagency-25e32/versions/ddd69a2ff78341fa","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-01-21T18:15:54.706787Z","createUser":{"email":"hussienFarghal@gmail.com"},"finalizeTime":"2021-01-21T18:15:59.926933Z","finalizeUser":{"email":"hussienFarghal@gmail.com"},"preview":{}},"type":"DEPLOY","releaseTime":"2021-01-21T18:16:00.293158592Z","releaseUser":{"email":"hussienFarghal@gmail.com"}}
+[info] ✔  hosting[foundationagency-25e32]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/foundationagency-25e32/overview
+[info] Hosting URL: https://foundationagency-25e32.web.app
+[debug] [2021-01-21T18:17:24.505Z] ----------------------------------------------------------------------
+[debug] [2021-01-21T18:17:24.507Z] Command:       /Users/hussien/.nvm/versions/node/v14.15.4/bin/node /Users/hussien/.nvm/versions/node/v14.15.4/bin/firebase deploy
+[debug] [2021-01-21T18:17:24.507Z] CLI Version:   9.2.1
+[debug] [2021-01-21T18:17:24.507Z] Platform:      darwin
+[debug] [2021-01-21T18:17:24.507Z] Node Version:  v14.15.4
+[debug] [2021-01-21T18:17:24.508Z] Time:          Thu Jan 21 2021 20:17:24 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-01-21T18:17:24.508Z] ----------------------------------------------------------------------
+[debug] [2021-01-21T18:17:24.508Z] 
+[debug] [2021-01-21T18:17:24.513Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-21T18:17:24.514Z] > authorizing via signed-in user
+[debug] [2021-01-21T18:17:24.514Z] [iam] checking project foundationagency-25e32 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-01-21T18:17:24.517Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/foundationagency-25e32:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-01-21T18:17:25.321Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:17:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=581","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:25.322Z] > refreshing access token with scopes: []
+[debug] [2021-01-21T18:17:25.323Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:17:25.563Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 21 Jan 2021 18:17:25 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:25.589Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 [none]
+[debug] [2021-01-21T18:17:25.941Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 200
+[debug] [2021-01-21T18:17:25.941Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 {"projectId":"foundationagency-25e32","projectNumber":"1036498804696","displayName":"foundationAgency","name":"projects/foundationagency-25e32","resources":{"hostingSite":"foundationagency-25e32"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'foundationagency-25e32'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-01-21T18:17:25.943Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-21T18:17:25.943Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:17:26.181Z] <<< HTTP RESPONSE 200 {"date":"Thu, 21 Jan 2021 18:17:26 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:26.207Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-01-21T18:17:27.542Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:17:27 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[foundationagency-25e32]: beginning deploy... 
+[info] i  hosting[foundationagency-25e32]: found 9 files in dist/ 
+[debug] [2021-01-21T18:17:27.554Z] > refreshing access token with scopes: []
+[debug] [2021-01-21T18:17:27.554Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:17:27.555Z] [hosting] hash cache [ZGlzdA] stored for 9 files
+[debug] [2021-01-21T18:17:27.555Z] [hosting][hash queue][FINAL] {"max":3,"min":0,"avg":0.7777777777777778,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":6}
+[debug] [2021-01-21T18:17:27.788Z] <<< HTTP RESPONSE 200 {"date":"Thu, 21 Jan 2021 18:17:27 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:27.814Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/da7956c292eea03d:populateFiles [none]
+[debug] [2021-01-21T18:17:27.815Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/da7956c292eea03d:populateFiles {"files":{"/apple-touch-icon.png":"a94127d8e4d7d3bf7a9a1ab6639db8cce855ccdf96b6dcd5977f8e8e8efec82c","/favicon.ico":"e16aad7fc0c39287247b97315c18b5d8be88315009971f32c892735177e90cc7","/robots.txt":"9963f443ecc7fca2136e438f25b1cd36f900c22cbb35f1a6972de2e67c528f62","/scripts/main.js":"f4103f5ef19d50429cd75a8cc7c4d465bff465c9f34cd6d82fb5b78e451daa6c","/scripts/vendor.js":"7e41ffe85bb760aef16b377c9d65d7952b7d0a0af0cc2957d27cdefd1a17d357","/styles/vendor.css":"9722e7b36fe51a20c32d26f80fa2447b3dc2fcdff113fa5a8981d94000463485","/index.html":"7af847220e7ae52f8d73e56e4526d75ef95a2929a573c3549baaf3091156da9b","/styles/main.css":"036896d41b904dc9f8daf283d3efc7361c98af54c75fc69481586062e2519fb8","/scripts/modernizr.js":"2d1bd22c9cb55f7aaade5038e218a6fbe5668e90d1f5392bbf38b1b58f09fd39"}}
+[debug] [2021-01-21T18:17:28.854Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/da7956c292eea03d:populateFiles 200
+[debug] [2021-01-21T18:17:28.855Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/da7956c292eea03d:populateFiles {"uploadRequiredHashes":["7af847220e7ae52f8d73e56e4526d75ef95a2929a573c3549baaf3091156da9b"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/da7956c292eea03d/files"}
+[debug] [2021-01-21T18:17:28.855Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/da7956c292eea03d/files/7af847220e7ae52f8d73e56e4526d75ef95a2929a573c3549baaf3091156da9b [none]
+[debug] [2021-01-21T18:17:28.855Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/da7956c292eea03d/files/7af847220e7ae52f8d73e56e4526d75ef95a2929a573c3549baaf3091156da9b [stream]
+[debug] [2021-01-21T18:17:28.856Z] [hosting][populate queue][FINAL] {"max":1301,"min":1301,"avg":1301,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1302}
+[debug] [2021-01-21T18:17:28.857Z] [hosting] uploads queued: 1
+[debug] [2021-01-21T18:17:30.548Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/da7956c292eea03d/files/7af847220e7ae52f8d73e56e4526d75ef95a2929a573c3549baaf3091156da9b 200
+[debug] [2021-01-21T18:17:30.548Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/da7956c292eea03d/files/7af847220e7ae52f8d73e56e4526d75ef95a2929a573c3549baaf3091156da9b [stream]
+[debug] [2021-01-21T18:17:30.549Z] [hosting][upload queue][FINAL] {"max":1694,"min":1694,"avg":1694,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1694}
+[info] ✔  hosting[foundationagency-25e32]: file upload complete 
+[debug] [2021-01-21T18:17:30.549Z] [hosting] deploy completed after 3006ms
+[debug] [2021-01-21T18:17:30.764Z] [
+  {
+    "config": {
+      "public": "dist/",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "foundationagency-25e32"
+    },
+    "site": "foundationagency-25e32",
+    "version": "sites/foundationagency-25e32/versions/da7956c292eea03d"
+  }
+]
+[info] i  hosting[foundationagency-25e32]: finalizing version... 
+[debug] [2021-01-21T18:17:30.765Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-21T18:17:30.765Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:17:30.996Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Thu, 21 Jan 2021 18:17:31 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:31.023Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/da7956c292eea03d?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-01-21T18:17:32.119Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:17:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:32.120Z] [hosting] finalized version for foundationagency-25e32: {"name":"sites/foundationagency-25e32/versions/da7956c292eea03d","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-01-21T18:17:27.143944Z","createUser":{"email":"hussienFarghal@gmail.com"},"finalizeTime":"2021-01-21T18:17:32.173818Z","finalizeUser":{"email":"hussienFarghal@gmail.com"}}
+[info] ✔  hosting[foundationagency-25e32]: version finalized 
+[info] i  hosting[foundationagency-25e32]: releasing new version... 
+[debug] [2021-01-21T18:17:32.121Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/releases?version_name=sites/foundationagency-25e32/versions/da7956c292eea03d  
+ {"message":null}
+[debug] [2021-01-21T18:17:33.164Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:17:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:17:33.164Z] [hosting] release: {"name":"sites/foundationagency-25e32/releases/1611253052553945","version":{"name":"sites/foundationagency-25e32/versions/da7956c292eea03d","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-01-21T18:17:27.143944Z","createUser":{"email":"hussienFarghal@gmail.com"},"finalizeTime":"2021-01-21T18:17:32.173818Z","finalizeUser":{"email":"hussienFarghal@gmail.com"},"preview":{}},"type":"DEPLOY","releaseTime":"2021-01-21T18:17:32.553945312Z","releaseUser":{"email":"hussienFarghal@gmail.com"}}
+[info] ✔  hosting[foundationagency-25e32]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/foundationagency-25e32/overview
+[info] Hosting URL: https://foundationagency-25e32.web.app
+[debug] [2021-01-21T18:18:23.055Z] ----------------------------------------------------------------------
+[debug] [2021-01-21T18:18:23.057Z] Command:       /Users/hussien/.nvm/versions/node/v14.15.4/bin/node /Users/hussien/.nvm/versions/node/v14.15.4/bin/firebase deploy
+[debug] [2021-01-21T18:18:23.057Z] CLI Version:   9.2.1
+[debug] [2021-01-21T18:18:23.057Z] Platform:      darwin
+[debug] [2021-01-21T18:18:23.057Z] Node Version:  v14.15.4
+[debug] [2021-01-21T18:18:23.058Z] Time:          Thu Jan 21 2021 20:18:23 GMT+0200 (Eastern European Standard Time)
+[debug] [2021-01-21T18:18:23.058Z] ----------------------------------------------------------------------
+[debug] [2021-01-21T18:18:23.059Z] 
+[debug] [2021-01-21T18:18:23.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-21T18:18:23.064Z] > authorizing via signed-in user
+[debug] [2021-01-21T18:18:23.065Z] [iam] checking project foundationagency-25e32 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-01-21T18:18:23.067Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/foundationagency-25e32:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-01-21T18:18:23.447Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:18:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=124","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:23.448Z] > refreshing access token with scopes: []
+[debug] [2021-01-21T18:18:23.449Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:18:23.682Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 21 Jan 2021 18:18:23 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:23.715Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 [none]
+[debug] [2021-01-21T18:18:24.069Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 200
+[debug] [2021-01-21T18:18:24.070Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/foundationagency-25e32 {"projectId":"foundationagency-25e32","projectNumber":"1036498804696","displayName":"foundationAgency","name":"projects/foundationagency-25e32","resources":{"hostingSite":"foundationagency-25e32"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'foundationagency-25e32'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2021-01-21T18:18:24.072Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-21T18:18:24.072Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:18:24.355Z] <<< HTTP RESPONSE 200 {"date":"Thu, 21 Jan 2021 18:18:24 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:24.382Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions  
+ {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2021-01-21T18:18:25.687Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:18:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[foundationagency-25e32]: beginning deploy... 
+[info] i  hosting[foundationagency-25e32]: found 9 files in dist/ 
+[debug] [2021-01-21T18:18:25.698Z] > refreshing access token with scopes: []
+[debug] [2021-01-21T18:18:25.698Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:18:25.699Z] [hosting] hash cache [ZGlzdA] stored for 9 files
+[debug] [2021-01-21T18:18:25.699Z] [hosting][hash queue][FINAL] {"max":3,"min":0,"avg":0.8888888888888888,"active":0,"complete":9,"success":9,"errored":0,"retried":0,"total":9,"elapsed":5}
+[debug] [2021-01-21T18:18:25.924Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","date":"Thu, 21 Jan 2021 18:18:26 GMT","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:25.950Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/18fc3fd45602d83c:populateFiles [none]
+[debug] [2021-01-21T18:18:25.950Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/18fc3fd45602d83c:populateFiles {"files":{"/apple-touch-icon.png":"a94127d8e4d7d3bf7a9a1ab6639db8cce855ccdf96b6dcd5977f8e8e8efec82c","/favicon.ico":"e16aad7fc0c39287247b97315c18b5d8be88315009971f32c892735177e90cc7","/robots.txt":"9963f443ecc7fca2136e438f25b1cd36f900c22cbb35f1a6972de2e67c528f62","/scripts/main.js":"f4103f5ef19d50429cd75a8cc7c4d465bff465c9f34cd6d82fb5b78e451daa6c","/scripts/vendor.js":"7e41ffe85bb760aef16b377c9d65d7952b7d0a0af0cc2957d27cdefd1a17d357","/styles/vendor.css":"9722e7b36fe51a20c32d26f80fa2447b3dc2fcdff113fa5a8981d94000463485","/index.html":"2f4d3de9f62935965a90ce2b1dbb5c4427fd35b1d01718f366b5072e3e24ffeb","/styles/main.css":"036896d41b904dc9f8daf283d3efc7361c98af54c75fc69481586062e2519fb8","/scripts/modernizr.js":"2d1bd22c9cb55f7aaade5038e218a6fbe5668e90d1f5392bbf38b1b58f09fd39"}}
+[debug] [2021-01-21T18:18:26.972Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/18fc3fd45602d83c:populateFiles 200
+[debug] [2021-01-21T18:18:26.972Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/18fc3fd45602d83c:populateFiles {"uploadRequiredHashes":["2f4d3de9f62935965a90ce2b1dbb5c4427fd35b1d01718f366b5072e3e24ffeb"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/18fc3fd45602d83c/files"}
+[debug] [2021-01-21T18:18:26.973Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/18fc3fd45602d83c/files/2f4d3de9f62935965a90ce2b1dbb5c4427fd35b1d01718f366b5072e3e24ffeb [none]
+[debug] [2021-01-21T18:18:26.973Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/18fc3fd45602d83c/files/2f4d3de9f62935965a90ce2b1dbb5c4427fd35b1d01718f366b5072e3e24ffeb [stream]
+[debug] [2021-01-21T18:18:26.974Z] [hosting][populate queue][FINAL] {"max":1275,"min":1275,"avg":1275,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1276}
+[debug] [2021-01-21T18:18:26.974Z] [hosting] uploads queued: 1
+[debug] [2021-01-21T18:18:28.456Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/18fc3fd45602d83c/files/2f4d3de9f62935965a90ce2b1dbb5c4427fd35b1d01718f366b5072e3e24ffeb 200
+[debug] [2021-01-21T18:18:28.457Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/foundationagency-25e32/versions/18fc3fd45602d83c/files/2f4d3de9f62935965a90ce2b1dbb5c4427fd35b1d01718f366b5072e3e24ffeb [stream]
+[debug] [2021-01-21T18:18:28.457Z] [hosting][upload queue][FINAL] {"max":1485,"min":1485,"avg":1485,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1485}
+[info] ✔  hosting[foundationagency-25e32]: file upload complete 
+[debug] [2021-01-21T18:18:28.457Z] [hosting] deploy completed after 2769ms
+[debug] [2021-01-21T18:18:28.672Z] [
+  {
+    "config": {
+      "public": "dist/",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "site": "foundationagency-25e32"
+    },
+    "site": "foundationagency-25e32",
+    "version": "sites/foundationagency-25e32/versions/18fc3fd45602d83c"
+  }
+]
+[info] i  hosting[foundationagency-25e32]: finalizing version... 
+[debug] [2021-01-21T18:18:28.673Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-01-21T18:18:28.673Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-01-21T18:18:28.906Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 21 Jan 2021 18:18:29 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:28.932Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/versions/18fc3fd45602d83c?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2021-01-21T18:18:29.698Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:18:29 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:29.698Z] [hosting] finalized version for foundationagency-25e32: {"name":"sites/foundationagency-25e32/versions/18fc3fd45602d83c","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-01-21T18:18:25.327669Z","createUser":{"email":"hussienFarghal@gmail.com"},"finalizeTime":"2021-01-21T18:18:29.762946Z","finalizeUser":{"email":"hussienFarghal@gmail.com"}}
+[info] ✔  hosting[foundationagency-25e32]: version finalized 
+[info] i  hosting[foundationagency-25e32]: releasing new version... 
+[debug] [2021-01-21T18:18:29.699Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/foundationagency-25e32/releases?version_name=sites/foundationagency-25e32/versions/18fc3fd45602d83c  
+ {"message":null}
+[debug] [2021-01-21T18:18:30.712Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 21 Jan 2021 18:18:30 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-21T18:18:30.712Z] [hosting] release: {"name":"sites/foundationagency-25e32/releases/1611253110101974","version":{"name":"sites/foundationagency-25e32/versions/18fc3fd45602d83c","status":"FINALIZED","config":{},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2021-01-21T18:18:25.327669Z","createUser":{"email":"hussienFarghal@gmail.com"},"finalizeTime":"2021-01-21T18:18:29.762946Z","finalizeUser":{"email":"hussienFarghal@gmail.com"},"preview":{}},"type":"DEPLOY","releaseTime":"2021-01-21T18:18:30.101974350Z","releaseUser":{"email":"hussienFarghal@gmail.com"}}
+[info] ✔  hosting[foundationagency-25e32]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/foundationagency-25e32/overview
+[info] Hosting URL: https://foundationagency-25e32.web.app
