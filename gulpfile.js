@@ -1,5 +1,5 @@
 // generated on 2021-01-21 using generator-webapp 4.0.0-8
-const { src, dest, watch, series, parallel, lastRun } = require('gulp');
+const {src, dest, watch, series, parallel, lastRun} = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
 const fs = require('fs');
 const mkdirp = require('mkdirp');
@@ -8,7 +8,7 @@ const browserSync = require('browser-sync');
 const del = require('del');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
-const { argv } = require('yargs');
+const {argv} = require('yargs');
 
 const $ = gulpLoadPlugins();
 const server = browserSync.create();
@@ -36,7 +36,7 @@ function styles() {
       sourcemaps: !isProd,
     }))
     .pipe(server.reload({stream: true}));
-};
+}
 
 function scripts() {
   return src('app/scripts/**/*.js', {
@@ -48,7 +48,7 @@ function scripts() {
       sourcemaps: !isProd ? '.' : false,
     }))
     .pipe(server.reload({stream: true}));
-};
+}
 
 async function modernizr() {
   const readConfig = () => new Promise((resolve, reject) => {
@@ -86,13 +86,15 @@ const lintBase = (files, options) => {
     .pipe($.eslint.format())
     .pipe($.if(!server.active, $.eslint.failAfterError()));
 }
+
 function lint() {
-  return lintBase('app/scripts/**/*.js', { fix: true })
+  return lintBase('app/scripts/**/*.js', {fix: true})
     .pipe(dest('app/scripts'));
-};
+}
+
 function lintTest() {
   return lintBase('test/spec/**/*.js');
-};
+}
 
 function html() {
   return src('app/*.html')
@@ -113,15 +115,15 @@ function html() {
 }
 
 function images() {
-  return src('app/images/**/*', { since: lastRun(images) })
+  return src('app/images/**/*', {since: lastRun(images)})
     .pipe($.imagemin())
     .pipe(dest('dist/images'));
-};
+}
 
 function fonts() {
   return src('app/fonts/**/*.{eot,svg,ttf,woff,woff2}')
     .pipe($.if(!isProd, dest('.tmp/fonts'), dest('dist/fonts')));
-};
+}
 
 function extras() {
   return src([
@@ -130,7 +132,7 @@ function extras() {
   ], {
     dot: true
   }).pipe(dest('dist'));
-};
+}
 
 function clean() {
   return del(['.tmp', 'dist'])
