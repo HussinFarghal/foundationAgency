@@ -20,13 +20,13 @@ const isTest = process.env.NODE_ENV === 'test';
 const isDev = !isProd && !isTest;
 
 function styles() {
-  return src('app/styles/*.scss', {
+  return src('app/styles/**/*.scss', {
     sourcemaps: !isProd,
   })
     .pipe($.plumber())
     .pipe($.sass.sync({
-      outputStyle: 'compact',
-      precision: 100,
+      outputStyle: 'expanded',
+      precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.postcss([
@@ -99,12 +99,12 @@ function lintTest() {
 function html() {
   return src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: false})])))
+    // .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
+    .pipe($.if(/\.css$/, $.postcss()))
     .pipe($.if(/\.html$/, $.htmlmin({
       collapseWhitespace: false,
       minifyCSS: true,
-      minifyJS: {compress: {drop_console: true}},
+      // minifyJS: {compress: {drop_console: true}},
       processConditionalComments: true,
       removeComments: false,
       removeEmptyAttributes: true,
@@ -157,7 +157,7 @@ const build = series(
 
 function startAppServer() {
   server.init({
-    notify: false,
+    notify: true,
     port,
     server: {
       baseDir: ['.tmp', 'app'],
@@ -177,6 +177,7 @@ function startAppServer() {
   watch('app/scripts/**/*.js', scripts);
   watch('modernizr.json', modernizr);
   watch('app/fonts/**/*', fonts);
+  watch('app/images/**/*', images);
 }
 
 function startTestServer() {
