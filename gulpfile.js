@@ -25,7 +25,7 @@ function styles() {
   })
     .pipe($.plumber())
     .pipe($.sass.sync({
-      outputStyle: 'expanded',
+      outputStyle: 'compressed',
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
@@ -99,14 +99,14 @@ function lintTest() {
 function html() {
   return src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
-    // .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
-    .pipe($.if(/\.css$/, $.postcss()))
+    .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
+    .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: true})])))
     .pipe($.if(/\.html$/, $.htmlmin({
-      collapseWhitespace: false,
+      collapseWhitespace: true,
       minifyCSS: true,
-      // minifyJS: {compress: {drop_console: true}},
+      minifyJS: {compress: {drop_console: true}},
       processConditionalComments: true,
-      removeComments: false,
+      removeComments: true,
       removeEmptyAttributes: true,
       removeScriptTypeAttributes: true,
       removeStyleLinkTypeAttributes: true
