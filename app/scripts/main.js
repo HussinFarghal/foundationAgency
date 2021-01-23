@@ -1,4 +1,4 @@
-console.log('\'Allo \'Allo!');
+console.log('testing scripts')
 
 // Uncomment to enable Bootstrap tooltips
 // https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere

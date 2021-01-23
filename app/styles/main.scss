@@ -1,12 +1,14 @@
 @charset "UTF-8";
 // 1. Configuration and helpers
 @import "utilities/utilities";
-// 2. Base
+// 2. Vendors and third party libraries
+@import "vendors/vendors";
+// 3. Base
 @import "base/base";
-// 3. Layout-related sections
+// 4. Layout-related sections
 @import "layout/layouts";
-// 4. Components
+// 5. Components
 @import "components/components";
-// 5. Page-specific styles
+// 6. Page-specific styles
 @import "pages/pages";
 

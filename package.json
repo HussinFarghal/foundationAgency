@@ -47,9 +47,7 @@
     "tasks": "gulp --tasks"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "Firefox ESR"
+    "last 10 versions"
   ],
   "eslintConfig": {
     "parserOptions": {
