@@ -7,10 +7,12 @@
 // =============================================================================
 $font-light-path: '../fonts/WorkSans-Light';
 $work-sans-light: "Work Sans Light";
-$font-light: 100;
+$font-light: 300;
 $font-regular-path: '../fonts/WorkSans-Regular';
 $work-sans-regular: "Work Sans Regular";
 $font-regular: 400;
 $font-bold-path: '../fonts/WorkSans-Bold';
 $work-sans-bold: "Work Sans Bold";
-$font-bold: 800;
+$font-bold: 700;
+$font-family-base: $work-sans-regular;
+$font-weight-base: $font-regular;
