@@ -5,6 +5,7 @@
 // 1. Main colors
 // *****************************************************************************
 $black: #2B292D;
+$white: #ffffff;
 $purple: #3040C4;
 $light-coral: #F3C6BD;
 $gray: #F4F5F7;
@@ -19,7 +20,9 @@ $pattens-blue: #D3E9EF;
 $topaz: #807F81;
 $sunglow: #FFC52C;
 $theme-colors: (
-  sona: #3040C4
+  purple: $purple,
+  gray: $gray,
+  white: $white,
 );
 
 

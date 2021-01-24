@@ -173,11 +173,11 @@ function startAppServer() {
     '.tmp/fonts/**/*'
   ]).on('change', server.reload);
 
-  watch('app/styles/**/*.scss', styles);
-  watch('app/scripts/**/*.js', scripts);
-  watch('modernizr.json', modernizr);
-  watch('app/fonts/**/*', fonts);
-  watch('app/images/**/*', images);
+  watch('app/styles/**/*.scss', styles, server.reload);
+  watch('app/scripts/**/*.js', scripts, server.reload);
+  watch('modernizr.json', modernizr, server.reload);
+  watch('app/fonts/**/*', fonts, server.reload);
+  watch('app/images/**/*', images, server.reload);
 }
 
 function startTestServer() {

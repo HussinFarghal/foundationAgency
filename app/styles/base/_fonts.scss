@@ -5,8 +5,10 @@
 // *****************************************************************************
 // 1. Light font
 // *****************************************************************************
-
 @include font-face($work-sans-light, $font-light-path, $font-light);
+.font-weight-light {
+  font-family: $work-sans-light;
+}
 
 // *****************************************************************************
 // 2. Regular font
@@ -18,4 +20,7 @@
 // 3. Bold font
 // *****************************************************************************
 
-@include font-face($work-sans-bold, $font-bold-path, $font-bold);
+@include font-face($work-sans-bold, $font-bold-path, $font-regular);
+.font-weight-bold {
+  font-family: $work-sans-bold;
+}
