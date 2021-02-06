@@ -8,6 +8,7 @@
     box-shadow: 0 -4px 16px 0 lighten($black, 50);
     @include media-breakpoint-up(sm) {
       background-color: transparent;
+      box-shadow: none;
     }
 
     .brand {
@@ -16,23 +17,46 @@
       padding: .5rem 0;
       width: 75%;
       border-right: 1px solid lighten($black, 75);
+      @include media-breakpoint-up(sm) {
+        border-right: none;
+      }
 
       .logo {
         box-shadow: 0 1px 2px 0 lighten($black, 70);
         border-radius: $border-radius-lg;
         padding: 0.4rem 0.8rem;
         margin-right: .9rem;
+        @include media-breakpoint-up(sm) {
+          box-shadow: none;
+          padding: 0;
+          margin-right: .5rem;
+        }
 
         img {
           width: 1.625rem;
           height: 2rem;
+          @include media-breakpoint-up(sm) {
+            width: 2.75rem;
+            height: 2.75rem;
+          }
         }
 
       }
 
-      h4 {
-        margin-bottom: 0;
+      .slogan {
+        h4 {
+          margin-bottom: 0;
+          @include media-breakpoint-up(sm) {
+            margin-bottom: .2rem;
+          }
+        }
+
+        h6 {
+          color: lighten($black, 30);
+          margin-bottom: 0;
+        }
       }
+
     }
 
     .navbar-toggler {
