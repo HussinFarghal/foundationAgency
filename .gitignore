@@ -1,7 +1,7 @@
 # dependencies
 node_modules
 bower_components
-
+firebase-debug.log
 # compiled output
 .idea
 /.tmp
