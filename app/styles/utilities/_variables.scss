@@ -20,11 +20,18 @@ $pattens-blue: #D3E9EF;
 $topaz: #807F81;
 $sunglow: #FFC52C;
 $theme-colors: (
-  purple: $purple,
-  gray: $gray,
+  primary: $purple,
+  secondary: $gray,
+  success: $pigment-green,
+  info:$pacific-blue,
+  danger:$alizarin,
+  warning:$cinnabar,
   white: $white,
+  black: $black,
+  purple: $purple
 );
-
+$body-bg: $white;
+$body-color: $black;
 
 // =============================================================================
 // 2. Fonts
@@ -40,3 +47,4 @@ $work-sans-bold: "Work Sans Bold";
 $font-bold: 700;
 $font-family-base: $work-sans-regular;
 $font-weight-base: $font-regular;
+
