@@ -98,6 +98,8 @@ function lintTest() {
 
 function html() {
   return src('app/*.html')
+    .pipe($.htmlhint())
+    .pipe($.htmlhint.reporter())
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
     .pipe($.if(/\.css$/, $.postcss([cssnano({safe: true, autoprefixer: true})])))
@@ -109,8 +111,14 @@ function html() {
       removeComments: true,
       removeEmptyAttributes: true,
       removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true
+      removeStyleLinkTypeAttributes: true,
+      removeEmptyElements: true,
+      sortAttributes: true,
+      sortClassName: true,
+
+
     })))
+
     .pipe(dest('dist'));
 }
 
@@ -172,7 +180,7 @@ function startAppServer() {
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', server.reload);
-
+  watch('app/*.html', html, server.reload);
   watch('app/styles/**/*.scss', styles, server.reload);
   watch('app/scripts/**/*.js', scripts, server.reload);
   watch('modernizr.json', modernizr, server.reload);
@@ -214,7 +222,7 @@ function startDistServer() {
 
 let serve;
 if (isDev) {
-  serve = series(clean, parallel(styles, scripts, modernizr, fonts), startAppServer);
+  serve = series(clean, parallel(styles, scripts, modernizr, fonts, html), startAppServer);
 } else if (isTest) {
   serve = series(clean, scripts, startTestServer);
 } else if (isProd) {
